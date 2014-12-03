@@ -10,8 +10,7 @@ namespace GSB
     class bddGSB
     {
         static private string paramConnexion = "Database=gsb;Data Source=localhost;User Id=root;Password=";
-        static MySqlConnection connexion = new MySqlConnection();
-        static connexion = new MySqlConnection(paramConnexion);
+        static MySqlConnection connexion = new MySqlConnection(paramConnexion);
         public void connexionBase(string connexionChoix)
         {
 
