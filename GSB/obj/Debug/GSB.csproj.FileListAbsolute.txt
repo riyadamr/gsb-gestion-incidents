@@ -7,3 +7,5 @@ D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Properties.Resources.resources
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.csproj.GenerateResource.Cache
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.exe
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.pdb
+D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Personnel_From.resources
+D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Technicien_From.resources
