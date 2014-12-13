@@ -1,6 +1,6 @@
 ﻿namespace GSB
 {
-    partial class Technicien_From
+    partial class Technicien_Form
     {
         /// <summary>
         /// Required designer variable.

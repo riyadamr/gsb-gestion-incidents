@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GSB
 {
-    public partial class Technicien_From : Form
+    public partial class Technicien_Form : Form
     {
-        public Technicien_From()
+        public Technicien_Form()
         {
             InitializeComponent();
         }

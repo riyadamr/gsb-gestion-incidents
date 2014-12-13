@@ -53,7 +53,7 @@
             this.TBidentifiant.Name = "TBidentifiant";
             this.TBidentifiant.Size = new System.Drawing.Size(150, 20);
             this.TBidentifiant.TabIndex = 1;
-            this.TBidentifiant.Text = "Identifiant";
+            this.TBidentifiant.Text = "001RRRR";
             this.TBidentifiant.Click += new System.EventHandler(this.textBox1_Click);
             // 
             // TBpass
@@ -62,7 +62,7 @@
             this.TBpass.Name = "TBpass";
             this.TBpass.Size = new System.Drawing.Size(150, 20);
             this.TBpass.TabIndex = 2;
-            this.TBpass.Text = "Mot de passe";
+            this.TBpass.Text = "azerty11";
             this.TBpass.Click += new System.EventHandler(this.TBpass_Click);
             // 
             // label1

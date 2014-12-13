@@ -27,19 +27,14 @@ namespace GSB
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public static void fenPerso()
         {
-            Application.Run(new Personnel_From());
+            Application.Run(new Personnel_Form());
         }
 
         public static void fenTech()
         {
-            Application.Run(new Technicien_From());
+            Application.Run(new Technicien_Form());
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -56,8 +51,8 @@ namespace GSB
                 String pass = "";
 
                 MySqlDataReader myReader = gsb.getPersonnel(identifiant);
-
                 myReader.Read();
+
                 int nb = Convert.ToInt32(myReader["nbr"]);
                 pass = (myReader["passPersonnel"].ToString());
                 
