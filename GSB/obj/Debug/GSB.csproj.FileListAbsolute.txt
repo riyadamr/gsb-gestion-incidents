@@ -1,11 +1,11 @@
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\bin\Debug\GSB.exe.config
+D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\bin\Debug\GSB.XML
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\bin\Debug\GSB.exe
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\bin\Debug\GSB.pdb
-D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.csprojResolveAssemblyReference.cache
-D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Form1.resources
+D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Personnel_Form.resources
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Properties.Resources.resources
+D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Technicien_Form.resources
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.csproj.GenerateResource.Cache
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.exe
 D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.pdb
-D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Personnel_Form.resources
-D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Technicien_Form.resources
+D:\Dairon\SIO\SIO2\PPE\C#\GSB\GSB\obj\Debug\GSB.Login.resources

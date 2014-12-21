@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GSB</name>
+    </assembly>
+    <members>
+        <member name="T:GSB.bddGSB">
+            <summary>                                                            
+            Classe de gestions de la connexion et des interactions avec la base de données.                    
+            </summary>  
+        </member>
+        <member name="M:GSB.bddGSB.connexionBase(System.String)">
+            <summary>                                                            
+            Ouvre ou ferme la connexion en cours.                   
+            </summary>                                                           
+            <param name="connexionChoix">Contient le choix d'ouvrir ou de fermer la connexion.</param>   
+        </member>
+        <member name="M:GSB.bddGSB.getPersonnel(System.String)">
+            <summary>                                                            
+            Retourne les informations sur un personnel en fonction de l'identifiant renseigné en paramètre.                       
+            </summary>                                                           
+            <param name="identifiant">Identifiant correspondant à la clé primaire de la table personnel.</param>   
+        </member>
+        <member name="M:GSB.bddGSB.getTypePersonnel(System.String)">
+            <summary>                                                            
+            Retourne le type (personnel ou technicien) d'un utilisateur.                     
+            </summary>                                                           
+            <param name="identifiant">Identifiant correspondant à la clé primaire de la table personnel.</param>   
+        </member>
+        <member name="M:GSB.bddGSB.getMateriel(System.String)">
+            <summary>                                                            
+            Retourne les informations sur les matériels d'un personnel.                   
+            </summary>                                                           
+            <param name="idPersonnel">idPersonnel correspondant à la clé étrangère liée à la table personnel.</param>   
+        </member>
+        <member name="M:GSB.bddGSB.enregisterDemande(System.String,System.Int32,System.String,System.String)">
+            <summary>                                                            
+            Enregiste une nouvelle demande dans la table demande pour un utilisateur donné.                 
+            </summary>                                                           
+            <param name="describ">description du problème de la demande</param>
+            <param name="niveauDemande">niveau de d'urgence pour la demande</param>
+            <param name="personnel">matricule du personnel qui emet la demande</param>
+            <param name="materiel">materiel concerné par la demande.</param>
+        </member>
+        <member name="M:GSB.bddGSB.getDemandesP(System.String)">
+            <summary>                                                            
+            Retourne les demandes émisent par un personnel donné.                 
+            </summary>                                                           
+            <param name="identifiant">identifiant du personnel concerné</param>  
+        </member>
+        <member name="M:GSB.bddGSB.getDemandesT(System.String)">
+            <summary>                                                            
+            Retourne les demandes assignées à un techicien donné              
+            </summary>                                                           
+            <param name="identifiant">identifiant du personnel concerné</param>  
+        </member>
+        <member name="M:GSB.bddGSB.enregitrerPhase(System.Int32,System.String,System.String,System.String)">
+            <summary>                                                            
+            Enregistre un nouvelle phase pour une demande par un technicien donné           
+            </summary>                                                           
+            <param name="identifiant">identifiant du technicien qui créer la phase</param>
+            <param name="debut">date et heure de debut de la phase</param>
+            <param name="fin">date et heure de fin de la phase</param>
+            <param name="fin">description de la tache effectuée</param>
+        </member>
+        <member name="M:GSB.bddGSB.updateEtatDemande(System.String,System.Int32)">
+            <summary>                                                            
+            Modifie l'état de la demande dans la base de données.             
+            </summary>                                                           
+            <param name="identifiant">identifiant de la demande concernée</param> 
+            <param name="etat">nouvelle valeur de l'état</param> 
+        </member>
+        <member name="M:GSB.bddGSB.updateTypeDemande(System.String,System.Int32)">
+            <summary>                                                            
+            Modifie le type de traitement de la demande dans la base de données.             
+            </summary>                                                           
+            <param name="identifiant">identifiant de la demande concernée</param> 
+            <param name="etat">nouvelle valeur du type de traitement</param> 
+        </member>
+        <member name="T:GSB.Demande">
+            <summary>                                                            
+            Classe pour les demandes (tickets) reçus depuis la bdd.             
+            </summary>  
+        </member>
+        <member name="M:GSB.Demande.#ctor(System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>                                                            
+            Constructeur de la classe demande.           
+            </summary> 
+        </member>
+        <member name="M:GSB.Demande.getEtatDemande(System.Int32)">
+            <summary>                                                            
+            Retourne en fonction de la syntaxe choisi :
+            - pour un personnel : retourne numéro du ticket, nom du matériel de la demande, l'état de la demande et la description entre parenthèses.
+            - pour un technicien : retourne seulemement l'etat de la demande.
+            </summary>
+            <param name="version">Paramètre à 1 pour un personnel et à 2 pour un technicien.</param>  
+        </member>
+        <member name="T:GSB.Login">
+            <summary>                                                            
+            Fenêtre de connexion utilisateur                     
+            </summary>                                                             
+        </member>
+        <member name="F:GSB.Login.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:GSB.Login.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:GSB.Login.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:GSB.Personnel">
+            <summary>                                                            
+            Classe de personnel avec les propriétés d'un personnel ou technicien du laboratoire                 
+            </summary>  
+        </member>
+        <member name="M:GSB.Personnel.#ctor(System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>                                                            
+            Constructeur de la classe Personnel               
+            </summary> 
+        </member>
+        <member name="T:GSB.Personnel_Form">
+            <summary>                                                            
+            Fenêtre de création de tickets pour le personnel du laboratoire.                 
+            </summary>  
+        </member>
+        <member name="F:GSB.Personnel_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GSB.Personnel_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GSB.Personnel_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GSB.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:GSB.Technicien_Form">
+            <summary>                                                            
+            Fenêtre de gestion des tickets pour les techniciens                  
+            </summary>  
+        </member>
+        <member name="F:GSB.Technicien_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GSB.Technicien_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GSB.Technicien_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GSB.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:GSB.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:GSB.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>
