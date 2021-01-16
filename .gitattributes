@@ -22,3 +22,4 @@
 *.RTF	 diff=astextplain
 
 *.htm linguist-detectable=false
+*.js linguist-detectable=false
